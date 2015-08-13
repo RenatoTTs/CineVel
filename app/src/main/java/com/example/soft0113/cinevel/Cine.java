@@ -33,14 +33,14 @@ public class Cine extends Activity
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
      */
     private CharSequence mTitle;
-    private String url = "";
+    private String url = "http://developer.android.com/index.html";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cine);
 
-        abrirTela(webView,url);
+
 
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getFragmentManager().findFragmentById(R.id.navigation_drawer);
@@ -71,7 +71,7 @@ public class Cine extends Activity
         // update the main content by replacing fragments
         FragmentManager fragmentManager = getFragmentManager();
         fragmentManager.beginTransaction()
-                .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
+                .replace(R.id.container, PlaceholderFragment.newInstance(position+1))
                 .commit();
     }
 
@@ -79,11 +79,12 @@ public class Cine extends Activity
         switch (number) {
             case 1:
                 mTitle = getString(R.string.title_section1);
-                url ="http://jovemnerd.com.br/categoria/nerdcast/";
+                url ="http://developer.android.com/index.html";
+                abrirTela(webView, url);
                 break;
             case 2:
                 mTitle = getString(R.string.title_section2);
-                url ="http://www.coloridavida.com/blog/";
+                url ="http://youtube.ca";
                 abrirTela(webView, url);
                 break;
             case 3:
@@ -99,7 +100,7 @@ public class Cine extends Activity
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
         actionBar.setDisplayShowTitleEnabled(true);
         actionBar.setTitle(mTitle);
-        abrirTela(webView,url);
+
     }
 
 

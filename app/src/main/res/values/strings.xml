@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">News</string>
 
+
     <string name="title_section1">Home</string>
     <string name="title_section2">Blog</string>
     <string name="title_section3">Podeixar</string>
