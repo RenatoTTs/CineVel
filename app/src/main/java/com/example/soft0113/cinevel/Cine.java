@@ -88,7 +88,7 @@ public class Cine extends Activity
                 break;
             case 3:
                 mTitle = getString(R.string.title_section3);
-                url ="http://www.podeixar.com";
+                url ="http://www.terra.com.br";
                 abrirTela(webView, url);
                 break;
         }
